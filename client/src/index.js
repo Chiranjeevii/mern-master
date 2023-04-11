@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import { Provider } from "react-redux";
+// So that we can provide store to our app component
 import store from "./redux/store";
 import reportWebVitals from "./reportWebVitals";
 

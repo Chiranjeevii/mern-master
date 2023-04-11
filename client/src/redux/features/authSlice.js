@@ -1,3 +1,5 @@
+//Redux toolkit configuration
+
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 //createSlice is a higher-order function that accepts the slice name (e.g. token, user, todos), a set of reducers, and returns a single reducer along with the action creators for that reducer. 
 import * as api from "../api";

@@ -1,7 +1,9 @@
 import express from "express";
+//Express enables you to build server applications in Node.js. 
 import mongoose from "mongoose";
 import cors from "cors";
 import morgan from "morgan";
+//Morgan - HTTP req logger: when we make an API req we can see it in our local
 import userRouter from "./routes/user.js";
 import tourRouter from "./routes/tour.js";
 mongoose.set('strictQuery', true);

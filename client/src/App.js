@@ -12,25 +12,28 @@ import { setUser } from "./redux/features/authSlice";
 import NotFound from "./pages/NotFound";
 
 function App() {
-  const dispatch = useDispatch();
-  const user = JSON.parse(localStorage.getItem("profile"));
-  useEffect(() => {
-    dispatch(setUser(user));
-  }, []);
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <ToastContainer />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
-  );
+    const dispatch = useDispatch();
+    const user = JSON.parse(localStorage.getItem("profile"));
+    //This function calls dispatch(setUser), which sets the value of user from JSON parsed from localStorage.
+
+    useEffect(() => {
+        dispatch(setUser(user));
+    }, []);
+    //This function calls dispatch(setUser), which sets the value of user from JSON parsed from localStorage.
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <Header />
+                <ToastContainer />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

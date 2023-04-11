@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-
+// JWTs are used as a secure way to authenticate users and share information.
 import UserModal from "../models/user.js";
 
 const secret = "test";
